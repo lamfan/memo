@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Nunito&display=swap');
+
+body {
+    font-family: 'Nunito';
+}
+
+h1 {
+    font-family: 'Berkshire Swash';
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    background-color: #eee;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+.remark {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.active {
+    animation: slidein 0.6s;
+}
+
+@keyframes slidein {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.03, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
