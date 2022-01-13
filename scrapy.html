@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<h1>Init</h1>
+		https://docs.scrapy.org/en/latest/intro/tutorial.html
+		<ul>
+			<li>
+				<div>scrapy startproject project</div>
+				<div class="remark">完成後cd project</div>
+			</li>
+			<li>
+				<div>scrapy genspider bandai p-bandai.com/hk</div>
+				<div class="remark">自動生成蜘蛛檔 ./spiders/bandai.py</div>
+			</li>
+		</ul>
+		<h1>Create Spider</h1>
+		<ul>
+			<li>
+				<div>
+					class BandaiSpider(scrapy.Spider):<br />
+					name = 'bandai'<br />
+					allowed_domains = 'p-bandai.com/hk'<br />
+					start_urls = 'https://p-bandai.com/hk/'<br /><br />
+
+					def start_requests(self):<br />
+					yield scrapy.Request(url=self.start_urls,
+					callback=self.parse)<br /><br />
+
+					def parse(self, response):<br />
+					self.logger.info('Response = %s', response.url)<br />
+				</div>
+			</li>
+			<li>scrapy crawl bandai</li>
+		</ul>
+		<script src="js/index.js"></script>
+	</body>
+</html>

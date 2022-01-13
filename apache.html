@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<h1>Installation</h1>
+		<ul>
+			<li><div>sudo apachectl stop</div></li>
+			<li>
+				<div>
+					sudo launchctl unload -w
+					/System/Library/LaunchDaemons/org.apache.httpd.plist
+					2>/dev/null
+				</div>
+			</li>
+			<li>
+				<div>brew install httpd</div>
+			</li>
+		</ul>
+		<h1>Setting httpd.conf</h1>
+		<ul>
+			<li>
+				<div>/etc/apache2/httpd.conf</div>
+				<div class="remark">Macos檔案位置</div>
+			</li>
+			<li>
+				<div>/opt/homebrew/etc/httpd/httpd.conf</div>
+				<div class="remark">Homebrew安裝位置-新版</div>
+			</li>
+			<li>
+				<div>/usr/local/etc/httpd/httpd.conf</div>
+				<div class="remark">Homebrew安裝位置</div>
+			</li>
+			<li>
+				<div>Listen 8080 -> Listen 80</div>
+			</li>
+			<li>
+				<div>DocumentRoot -> "/Users/fan/Desktop/Apache"</div>
+			</li>
+			<li>
+				<div>Directory -> "/Users/fan/Desktop/Apache"</div>
+			</li>
+			<li>
+				<div>
+					Uncommand LoadModule rewrite_module
+					lib/httpd/modules/mod_rewrite.so
+				</div>
+			</li>
+		</ul>
+		<h1>Setting php</h1>
+		<script src="js/index.js"></script>
+	</body>
+</html>

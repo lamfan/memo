@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<h1>Echo All Variable</h1>
+		<ul>
+			<li>
+				<div>phpinfo(INFO_VARIABLES);</div>
+				<div class="remark">echo.php</div>
+			</li>
+			<li>
+				<div>
+					RewriteEngine On<br />
+
+					RewriteCond %{REQUEST_URI} !echo.php <br />
+					RewriteRule .* echo.php?ua=%{HTTP_USER_AGENT}&https=%{HTTPS}
+					[L]<br />
+				</div>
+				<div class="remark">.htaccess</div>
+			</li>
+		</ul>
+		<h1>rewrite rules</h1>
+		<ul>
+			<li>
+				<div>http://locahost/api/member/name/pass</div>
+				<div>
+					RewriteEngine on<br />
+					RewriteRule ^/?(.*)/(.*)/(.*)/(.*)$
+					/member.php?p1=$1&p2=$2<br /><br />
+				</div>
+				<div>http://locahost/member.php?p1=api&p2=member</div>
+			</li>
+		</ul>
+		<script src="js/index.js"></script>
+	</body>
+</html>

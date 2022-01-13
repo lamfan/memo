@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<h1>Object to string</h1>
+		<ul>
+			<li>
+				<div>
+					let payload = { result1: 10, result2: 20, result3: 30,
+					notImportant: 40, blablabla: 50, };
+				</div>
+				<div>
+					let string = Object.keys(payload) .filter(key =>
+					key.includes('result')) .map(key =>
+					`${key}=${payload[key]}`) .join('&');
+				</div>
+				<div>return "result1=10&result2=20&result3=30"</div>
+				<div class="remark">將object轉成文字</div>
+			</li>
+		</ul>
+		<script src="js/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<body>
+		<h1>Regular Expression</h1>
+		<ul>
+			<li>
+				<div>\".*?\"</div>
+				<div class="remark">"text/javascript"</div>
+			</li>
+			<li>
+				<div>[\n\t\s]*</div>
+				<div class="remark">clear all white space</div>
+			</li>
+		</ul>
+		<h1>日期</h1>
+		<ul>
+			<li>
+				<div class="remark">
+					// 將日期 '2020/07/15' 轉換為 '2020年07月15日'
+				</div>
+				<div>const date = '2020/07/15'</div>
+				<div class="remark">// 使用 group 把年、月、日抽取出來</div>
+				<div>const regex = /(\d{4})\/(\d{2})\/(\d{2})/</div>
+				<div class="remark">
+					// 使用 replace + backreference 轉換字串 // 在 replace
+					中是使用 $1、$2、... 替代群組捕獲的文字
+				</div>
+				<div>
+					date.replace(regex,'$1年$2月$3日') // "2020年07月15日"
+				</div>
+			</li>
+		</ul>
+		<script src="js/index.js"></script>
+	</body>
+</html>
