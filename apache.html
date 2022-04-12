@@ -12,11 +12,7 @@
 		<ul>
 			<li><div>sudo apachectl stop</div></li>
 			<li>
-				<div>
-					sudo launchctl unload -w
-					/System/Library/LaunchDaemons/org.apache.httpd.plist
-					2>/dev/null
-				</div>
+				<div>sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null</div>
 			</li>
 			<li>
 				<div>brew install httpd</div>
@@ -46,13 +42,9 @@
 				<div>Directory -> "/Users/fan/Desktop/Apache"</div>
 			</li>
 			<li>
-				<div>
-					Uncommand LoadModule rewrite_module
-					lib/httpd/modules/mod_rewrite.so
-				</div>
+				<div>Uncommand LoadModule rewrite_module lib/httpd/modules/mod_rewrite.so</div>
 			</li>
 		</ul>
-		<h1>Setting php</h1>
 		<script src="js/index.js"></script>
 	</body>
 </html>
